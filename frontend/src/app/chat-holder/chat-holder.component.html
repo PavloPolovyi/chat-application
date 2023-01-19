@@ -1,0 +1,6 @@
+<div class="container">
+  <div class="row">
+    <app-chats (eventEmitter) = "emittedChat = $event"></app-chats>
+    <app-messages [chat] = "emittedChat"></app-messages>
+  </div>
+</div>

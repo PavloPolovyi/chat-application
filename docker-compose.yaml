@@ -1,0 +1,41 @@
+version: '3.7'
+
+services:
+  app-server:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    container_name: app-server
+    ports:
+      - ${SPRING_LOCAL_PORT}:${SPRING_CONTAINER_PORT}
+    restart: always
+    depends_on:
+      - db
+    env_file:
+      - ./.env
+
+  app-client:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    container_name: app-client
+    env_file:
+      - ./.env
+    ports:
+      - ${NGINX_LOCAL_PORT}:${NGINX_CONTAINER_PORT}
+    restart: always
+    depends_on:
+      - app-server
+
+  db:
+    image: postgres:15-alpine
+    container_name: db
+    restart: unless-stopped
+    env_file:
+      - ./.env
+    environment:
+      - POSTGRES_USER=$POSTGRES_USER
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+      - POSTGRES_DB=$POSTGRES_DB
+    ports:
+      - ${POSTGRES_LOCAL_PORT}:${POSTGRES_CONTAINER_PORT}

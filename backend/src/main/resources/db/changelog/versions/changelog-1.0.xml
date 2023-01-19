@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-1.0.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+    <changeSet id="1.0.1" author="PavloPolovyi">
+        <comment>Create table Users</comment>
+        <createTable tableName="users">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" unique="true"/>
+            </column>
+            <column name="nick_name" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1.0.2" author="PavloPolovyi">
+        <comment>Create table Chats</comment>
+        <createTable tableName="chats">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" unique="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="created_on" type="TIMESTAMP">
+                <constraints nullable="false" />
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1.0.3" author="PavloPolovyi">
+        <comment>Create table Chat_messages</comment>
+        <createTable tableName="chat_messages">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" unique="true"/>
+            </column>
+            <column name="send_from" type="BIGINT">
+                <constraints nullable="false" />
+            </column>
+            <column name="message" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="date" type="TIMESTAMP">
+                <constraints nullable="false" />
+            </column>
+            <column name="chat_id" type="BIGINT">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1.0.4" author="PavloPolovyi">
+        <addForeignKeyConstraint baseTableName="chats" baseColumnNames="user_id" constraintName="chat_user_id" referencedTableName="users"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="chat_messages" baseColumnNames="send_from" constraintName="chat_messages_send_from" referencedTableName="users"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="chat_messages" baseColumnNames="chat_id" constraintName="chat_messages_chat_id" referencedTableName="chats"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>

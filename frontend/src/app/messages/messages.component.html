@@ -1,0 +1,17 @@
+<section class="chat">
+  <div class="header-chat">
+    <i class="icon fa fa-user-o" aria-hidden="true"></i>
+    <p class="name">{{chat?.name}}</p>
+    <i class="icon clickable fa fa-ellipsis-h right" aria-hidden="true"></i>
+  </div>
+  <div class="messages-chat" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+    <div class="message text-only" [class.response]="message.from === currentUserName" *ngFor="let message of messages">
+      <p class="text">{{message.from}}: {{message.message}}</p>
+      <p class="time" [class.response-time]="message.from === currentUserName">{{message.date | timeago}}</p>
+    </div>
+  </div>
+  <div class="footer-chat">
+    <input type="text" class="write-message" (keyup.enter) ="sendMessage(writeMessage.value); writeMessage.value = ''" #writeMessage placeholder="Type your message here">
+    <button class="send-message" (click) = "sendMessage(writeMessage.value); writeMessage.value = ''"><mat-icon> chat</mat-icon></button>
+  </div>
+</section>

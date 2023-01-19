@@ -1,0 +1,157 @@
+.chat {
+  width: 700px;
+  max-height: 730px;
+  min-height: 730px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header-chat {
+  background-color: #FFF;
+  min-height: 90px;
+  max-height: 90px;
+  box-shadow: 0px 3px 2px rgba(0,0,0,0.100);
+  display:flex;
+  align-items: center;
+}
+
+.chat .header-chat .icon {
+  margin-left: 30px;
+  color:#515151;
+  font-size: 14pt;
+}
+
+.chat .header-chat .name {
+  margin: 0 0 0 20px;
+  text-transform: uppercase;
+  font-family:'Montserrat', sans-serif;
+  font-size: 13pt;
+  color:#515151;
+}
+
+.chat .header-chat .right {
+  position: absolute;
+  right: 40px;
+}
+
+.chat .messages-chat {
+  min-height: 560px;
+  max-height: 560px;
+  padding: 40px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat .messages-chat::-webkit-scrollbar {
+  width: 10px;
+}
+
+.chat .messages-chat::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #673ab7;
+}
+
+.chat .messages-chat .message {
+  display:flex;
+  align-items: center;
+  margin-bottom: 8px;
+  flex: 1;
+}
+
+.chat .messages-chat .text {
+  display: block;
+  margin: 0 0;
+  background-color: #f6f6f6;
+  padding: 15px;
+  max-width: 50%;
+  border-radius: 12px;
+  word-break: break-word;
+}
+
+.text-only {
+  /*margin-left: 45px;*/
+}
+
+.time {
+  font-size: 10px;
+  color:lightgrey;
+  margin-bottom:10px;
+}
+
+.response-time {
+  float: right;
+  margin-right: 40px !important;
+}
+
+.response {
+  float: right;
+  margin-right: 0px !important;
+  margin-left:auto;
+}
+
+.response .text {
+  background-color: #e3effd !important;
+}
+
+.footer-chat {
+  overflow: hidden;
+  width: 100%;
+  min-height: 80px;
+  min-width: 80px;
+  display:flex;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+  background-color: #fff;
+  border-top: 2px solid #EEE;
+}
+
+.chat .footer-chat .send {
+  color:#fff;
+  background-color: #673ab7;
+  position: absolute;
+  right: 50px;
+  padding: 12px 12px 12px 12px;
+  border-radius: 50px;
+  font-size: 14pt;
+}
+
+.chat .footer-chat .name {
+  margin: 0 0 0 20px;
+  text-transform: uppercase;
+  font-family:'Montserrat', sans-serif;
+  font-size: 13pt;
+  color:#515151;
+}
+
+.chat .footer-chat .right {
+  position: absolute;
+  right: 40px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.write-message {
+  border:none !important;
+  width:80%;
+  height: 50px;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.send-message {
+  background: transparent;
+  border: none;
+  color: #673ab7;
+  cursor: pointer;
+}
+
+.clickable {
+  cursor: pointer;
+}
+

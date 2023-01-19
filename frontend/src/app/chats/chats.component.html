@@ -1,0 +1,16 @@
+<section class="discussions">
+  <div class="discussion search">
+    <div class="searchbar">
+      <input type="text" (keyup.enter) = "addChat(newChat.value); newChat.value = ''" placeholder="Create chat" #newChat>
+      <button class="add-chat" (click)="addChat(newChat.value); newChat.value = ''"><mat-icon>add_circle</mat-icon></button>
+    </div>
+  </div>
+  <div class="discussion" [class.message-active]="chat === selectedChat" (click)="addChatToEmitter(chat)" *ngFor="let chat of chats">
+    <div class="desc-contact">
+      <p class="name">{{chat.name}}</p>
+      <p class="message">{{chat.lastMessageSend}}</p>
+    </div>
+    <div class="new-message" *ngIf="unreadMessagesChatId.includes(chat.id)"><mat-icon> message</mat-icon></div>
+    <div class="timer">{{chat.lastMessageSendTime | timeago}}</div>
+  </div>
+</section>
