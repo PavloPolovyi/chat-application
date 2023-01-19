@@ -48,7 +48,7 @@ docker compose build
 ```bash
 docker compose up
 ```
-:five: Go to the browser and use the following url to test the application and see OpenAPI documentation. 
+:five: Go to the browser and use the following url to test the application: 
 ```bash
 http://localhost:9090
 ```
