@@ -27,6 +27,7 @@ Real time chat application that uses Spring Boot 3 for backend and Angular 14 as
 * TypeScript
 * Angular 14
 * StompJS
+* HTML/CSS
 ### Common
 * Docker
 
