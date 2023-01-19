@@ -1,7 +1,7 @@
 # Chat app
 
 <h2>📣 Project description 📣</h2>
-Real time chat application that uses Spring Boot 3 for backend and Angular 14 as a client. This application is built up using Streaming Text Oriented Messaging Protocol which is based on WebSocket's with in memory message broker. Application support authentification based on JWT tokens. For this purpose Spring Security OAuth2 is used. Chat's messages are stored in PostgreSQL database. Client uses StompJs library for sending and receiving messages. The project works well, but there are a lot of things that can be improved and many features that can be added.
+Real time chat application that uses Spring Boot 3 for backend and Angular 14 as a client. This application is built up using Streaming Text Oriented Messaging Protocol which is based on WebSocket with usage of memory message broker. Application support authentication based on JWT tokens. For this purpose Spring Security OAuth2 is used. Chat's messages are stored in PostgreSQL database. Client uses StompJs library for sending and receiving messages. The project works well, but there are a lot of things that can be improved and many features that can be added.
 
 <h2>Features</h2>
 
