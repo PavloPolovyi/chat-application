@@ -52,6 +52,6 @@ docker compose up
 ```bash
 http://localhost:9090
 ```
-:six: If port 9090 is busy on your machine, just change NGINX_LOCAL_PORT value in the .env file.
+:six: If port 9090 is busy on your machine, just change NGINX_LOCAL_PORT value and update CORS_ORIGIN after this in the .env file.
 
 
