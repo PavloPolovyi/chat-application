@@ -1,10 +1,12 @@
-package com.example.chatapp.service;
+package com.example.chatapp.service.impl;
 
 import com.example.chatapp.exception.AuthenticationException;
 import com.example.chatapp.model.User;
 import com.example.chatapp.repository.UserRepository;
 import com.example.chatapp.security.TokenService;
 import java.util.Optional;
+
+import com.example.chatapp.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

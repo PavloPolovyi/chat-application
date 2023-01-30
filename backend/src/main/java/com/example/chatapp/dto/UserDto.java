@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class RegistrationDto {
+public class UserDto {
     @NotBlank
     private String nickName;
     @NotBlank

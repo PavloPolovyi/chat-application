@@ -1,8 +1,10 @@
-package com.example.chatapp.service;
+package com.example.chatapp.service.impl;
 
 import com.example.chatapp.model.ChatMessage;
 import com.example.chatapp.repository.ChatMessageRepository;
 import java.util.List;
+
+import com.example.chatapp.service.ChatMessageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

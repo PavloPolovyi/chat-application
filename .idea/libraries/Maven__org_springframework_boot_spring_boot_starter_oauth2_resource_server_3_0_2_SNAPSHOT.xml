@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.boot:spring-boot-starter-oauth2-resource-server:3.0.2-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-oauth2-resource-server/3.0.2-SNAPSHOT/spring-boot-starter-oauth2-resource-server-3.0.2-20230120.001144-68.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-oauth2-resource-server/3.0.2-SNAPSHOT/spring-boot-starter-oauth2-resource-server-3.0.2-20230120.001144-68-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-oauth2-resource-server/3.0.2-SNAPSHOT/spring-boot-starter-oauth2-resource-server-3.0.2-20230120.001144-68-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

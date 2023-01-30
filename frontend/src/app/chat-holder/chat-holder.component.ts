@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Chat} from "../_model/chat";
+import {Chat} from '../_model/chat';
 
 @Component({
   selector: 'app-chat-holder',
