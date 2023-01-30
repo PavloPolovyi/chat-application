@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import {AuthenticationClient} from "./authentication.client";
-import {Router} from "@angular/router";
-import {User} from "../_model/user";
-import {environment} from "../../environment/environment";
+import {AuthenticationClient} from './authentication.client';
+import {Router} from '@angular/router';
+import {User} from '../_model/user';
+import {environment} from '../../environment/environment';
 
 @Injectable({
   providedIn: 'root'

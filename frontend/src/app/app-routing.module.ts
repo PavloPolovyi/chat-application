@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {AuthGuard} from "./_auth/auth.guard";
-import {LoginPageComponent} from "./login-page/login-page.component";
-import {RegisterPageComponent} from "./register-page/register-page.component";
-import {ChatHolderComponent} from "./chat-holder/chat-holder.component";
+import {AuthGuard} from './_auth/auth.guard';
+import {LoginPageComponent} from './login-page/login-page.component';
+import {RegisterPageComponent} from './register-page/register-page.component';
+import {ChatHolderComponent} from './chat-holder/chat-holder.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/chats', pathMatch: 'full' },

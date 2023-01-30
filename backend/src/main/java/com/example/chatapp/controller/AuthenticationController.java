@@ -1,6 +1,6 @@
 package com.example.chatapp.controller;
 
-import com.example.chatapp.dto.RegistrationDto;
+import com.example.chatapp.dto.UserDto;
 import com.example.chatapp.dto.Token;
 import com.example.chatapp.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
@@ -17,15 +17,15 @@ public class AuthenticationController {
 
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
-    public void register(@RequestBody RegistrationDto registrationDto) {
-        authenticationService.register(registrationDto.getNickName(),
-                registrationDto.getPassword());
+    public void register(@RequestBody UserDto userDto) {
+        authenticationService.register(userDto.getNickName(),
+                userDto.getPassword());
     }
 
     @PostMapping("/login")
-    public Token login(@RequestBody RegistrationDto registrationDto) {
+    public Token login(@RequestBody UserDto userDto) {
         String value = authenticationService
-                .login(registrationDto.getNickName(), registrationDto.getPassword());
+                .login(userDto.getNickName(), userDto.getPassword());
         return new Token(value);
     }
 }

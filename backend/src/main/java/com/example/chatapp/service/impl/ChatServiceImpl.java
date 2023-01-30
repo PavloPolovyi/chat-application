@@ -1,8 +1,11 @@
-package com.example.chatapp.service;
+package com.example.chatapp.service.impl;
 
 import com.example.chatapp.model.Chat;
 import com.example.chatapp.repository.ChatRepository;
 import java.util.List;
+import java.util.NoSuchElementException;
+
+import com.example.chatapp.service.ChatService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +16,8 @@ public class ChatServiceImpl implements ChatService {
 
     @Override
     public Chat get(Long id) {
-        return chatRepository.findById(id).orElseThrow();
+        return chatRepository.findById(id).orElseThrow(()
+                -> new NoSuchElementException("No such char with id " + id));
     }
 
     @Override

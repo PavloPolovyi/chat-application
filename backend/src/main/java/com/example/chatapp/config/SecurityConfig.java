@@ -57,7 +57,7 @@ public class SecurityConfig {
                 .build();
     }
 
-    public String tokenExtractor(HttpServletRequest request) {
+    private String tokenExtractor(HttpServletRequest request) {
         String header = request.getHeader(HttpHeaders.AUTHORIZATION);
         if (header != null) {
             return header.replace("Bearer ", "");

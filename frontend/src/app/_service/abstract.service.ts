@@ -1,6 +1,6 @@
-import {Observable, of} from "rxjs";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {environment} from "../../environment/environment";
+import {Observable, of} from 'rxjs';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {environment} from '../../environment/environment';
 
 export abstract class AbstractService {
 

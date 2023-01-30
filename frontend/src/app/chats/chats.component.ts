@@ -3,12 +3,12 @@ import {
   Component, EventEmitter,
   OnInit, Output
 } from '@angular/core';
-import {ChatService} from "../_service/chat.service";
-import {Chat} from "../_model/chat";
-import {Subscription} from "rxjs";
-import {RxStompService} from "../_service/rx-stomp.service";
-import {Message} from "@stomp/stompjs";
-import {ChatMessage} from "../_model/message";
+import {ChatService} from '../_service/chat.service';
+import {Chat} from '../_model/chat';
+import {Subscription} from 'rxjs';
+import {RxStompService} from '../_service/rx-stomp.service';
+import {Message} from '@stomp/stompjs';
+import {ChatMessage} from '../_model/message';
 
 @Component({
   selector: 'app-chats',

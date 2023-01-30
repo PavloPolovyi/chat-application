@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthenticationService} from "../_auth/authentication.service";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {passwordMatchingValidator} from "./password.matching.validator";
+import {AuthenticationService} from '../_auth/authentication.service';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {passwordMatchingValidator} from './password.matching.validator';
 
 @Component({
   selector: 'app-register-page',

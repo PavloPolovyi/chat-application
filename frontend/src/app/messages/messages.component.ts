@@ -1,11 +1,11 @@
 import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
-import {MessageService} from "../_service/message.service";
-import {ChatMessage} from "../_model/message";
-import {RxStompService} from "../_service/rx-stomp.service";
+import {MessageService} from '../_service/message.service';
+import {ChatMessage} from '../_model/message';
+import {RxStompService} from '../_service/rx-stomp.service';
 import {Message} from '@stomp/stompjs';
-import {Subscription} from "rxjs";
-import {Chat} from "../_model/chat";
-import {environment} from "../../environment/environment";
+import {Subscription} from 'rxjs';
+import {Chat} from '../_model/chat';
+import {environment} from '../../environment/environment';
 
 @Component({
   selector: 'app-messages',
